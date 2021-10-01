@@ -1,0 +1,162 @@
+@font-face {
+  font-family: JupiterPro;
+  src: url("../font/JupiterProBold.otf") format("opentype");
+}
+:root {
+  --animate-delay: 4.5s;
+}
+
+html,
+body {
+  height: 100%;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+.container video {
+  width: 100%;
+  display: block;
+}
+
+.container:before {
+  object-fit: cover;
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadein 2s;
+  animation-delay: 12s;
+  animation-fill-mode: forwards;
+}
+
+.typewriter .worldfirst {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+}
+
+html {
+  font-family: "JupiterPro", serif;
+  font-size: 150%;
+  line-height: 1.4;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.viewport-header {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2vw;
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 2px 2px 5px #ce7f50;
+}
+
+span {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  line-height: 0;
+  font-size: 1vw;
+  text-align: center;
+}
+
+p {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typing effect */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.grid-container {
+  columns: 9 150px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.grid-container div {
+  margin: 0 1.5rem 1.5rem 0;
+  width: 100%;
+  height: 60vh;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: all 0.25s ease-in-out;
+}
+.grid-container div:hover {
+  filter: grayscale(0);
+  border-color: coral;
+}
+.grid-container div img {
+  height: 100%;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+.grid-container div p {
+  margin: 5px 0;
+  padding-top: 200%;
+  text-align: center;
+  font-style: italic;
+  color: #fcba07;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+button {
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid red;
+  margin: 1em auto 1em;
+}
