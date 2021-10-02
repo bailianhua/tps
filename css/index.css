@@ -27,6 +27,9 @@ body {
 .fa-twitch {
   color: #7615f5;
 }
+.fa-youtube {
+  color: #f14029;
+}
 
 .container:before {
   object-fit: cover;
