@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: Jupiter;
+  src: url("/fonts/Jupiter Pro Bold.otf");
+}
+
+html {
+  font-family: Jupiter;
+}
+body {
+  margin: 0 !important;
+}

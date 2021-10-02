@@ -1,23 +1,22 @@
 {
-  "name": "TPS",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "tps",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bailianhua/tps.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bailianhua/tps/issues"
-  },
-  "homepage": "https://github.com/bailianhua/tps#readme",
   "dependencies": {
-    "tailwindcss": "^2.2.16"
+    "vue": "^3.2.16",
+    "vue-responsive-video-background-player": "^2.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.2",
+    "autoprefixer": "^10.3.6",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.0",
+    "vue-tsc": "^0.3.0"
   }
 }
