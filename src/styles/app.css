@@ -12,4 +12,17 @@ html {
 }
 body {
   margin: 0 !important;
+  height: 100vh;
+}
+
+@variants hover, focus, responsive {
+  .grayscale {
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
+  }
+
+  .filter-reset {
+    filter: none;
+    transition: all 0.2s ease;
+  }
 }
