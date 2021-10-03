@@ -127,7 +127,7 @@ export default defineComponent({
       teamTag: "TPS",
       teamName: "Thoughts Per Second",
       videoBackground: {
-        src: "/vids/endwalkerLogin.mp4",
+        src: "vids/endwalkerLogin.mp4",
         muted: true,
         loop: false
       }
