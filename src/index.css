@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Jupiter;
+  src: url("/fonts/Jupiter Pro Bold.otf");
+}
+
+html {
+  font-family: Jupiter;
+}
+body {
+  margin: 0 !important;
+  height: 100vh;
+}
+
+@variants hover, focus, responsive {
+  .grayscale {
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
+  }
+
+  .filter-reset {
+    filter: none;
+    transition: all 0.2s ease;
+  }
+}

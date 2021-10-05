@@ -33,15 +33,20 @@
                     v-on:click="characterInfo"
                 />
             </div>
+            <SearchCircleIcon
+                class="h-8 w-8 text-yellow-700 inline cursor-pointer group-hover:visible invisible"
+                @click="$emit('detailClicked', lodeStone)"
+            />
             <p class="text-yellow-700 italic font-black text-lg" :style="nameStyle">{{ cardName }}</p>
         </div>
     </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { SearchCircleIcon } from '@heroicons/vue/solid'
 export default defineComponent({
     name: 'Card',
-    components: {},
+    components: { SearchCircleIcon },
     props: {
         'bgImg': { Type: String, default: "" },
         'cardName': { Type: String, default: "" },
@@ -50,6 +55,7 @@ export default defineComponent({
         'twitchSrc': { Type: String, default: "" },
         'youtubeSrc': { Type: String, default: "" },
         'animationDelay': { Type: Number, default: "" },
+        'lodeStone': { Type: String, default: "" }
     },
     computed: {
         hasProfilePic: function () {
@@ -81,14 +87,7 @@ export default defineComponent({
     },
     methods: {
         characterInfo: function () {
-            const body = document.querySelector('body')
-            const modal = document.querySelector('.modal');
-            if (modal && body) {
-                modal.classList.toggle('opacity-0')
-                modal.classList.toggle('pointer-events-none')
-                body.classList.toggle('modal-active')
-            }
-
+            this.$emit('profilePush', this.modalImage);
         }
     }
 }
