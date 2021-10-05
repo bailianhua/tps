@@ -34,5 +34,5 @@ module.exports = {
       visibility: ["group-hover", "focus"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

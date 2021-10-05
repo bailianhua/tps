@@ -1,6 +1,6 @@
 <template>
     <div
-        class="animate-fade-in-up group hover:-translate-y-1 hover:scale-110 hover:filter-reset filter grayscale rounded-lg bg-cover bg-no-repeat w-40 shadow-xl border-2 border-yellow-700 bg-gradient-to-t from-grey-900 to-transparent"
+        class="animate-fade-in-up bg-center group hover:-translate-y-1 hover:scale-110 hover:filter-reset filter grayscale rounded-lg bg-cover bg-no-repeat w-40 shadow-xl border-2 border-yellow-700 bg-gradient-to-t from-grey-900 to-transparent"
         :style="cardStyle"
     >
         <div class="absolute inset-x-0 bottom-0 text-center">
@@ -44,6 +44,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { SearchCircleIcon } from '@heroicons/vue/solid'
+
 export default defineComponent({
     name: 'Card',
     components: { SearchCircleIcon },
@@ -87,7 +88,7 @@ export default defineComponent({
     },
     methods: {
         characterInfo: function () {
-            this.$emit('profilePush', this.modalImage);
+            this.$emit('profilePush', this.lodeStone);
         }
     }
 }

@@ -8,3 +8,5 @@ declare module '*.vue' {
 }
 
 declare module "vue-responsive-video-background-player";
+declare module "@heroicons/vue/solid";
+declare module "@heroicons/vue/outline";

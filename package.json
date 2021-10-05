@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.1",
-    "@heroicons/vue": "^1.0.4",
+    "@heroicons/vue": "^1.0.0",
+    "@tailwindcss/forms": "^0.3.4",
     "vue": "^3.2.16",
     "vue-responsive-video-background-player": "^2.2.0"
   },
